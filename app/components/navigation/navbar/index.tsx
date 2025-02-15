@@ -1,6 +1,8 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-import Image from 'next/image'
-import Link from "next/link"
+
+import Theme from "./Theme";
 
 const Navbar = () => {
   return (
@@ -13,12 +15,16 @@ const Navbar = () => {
           alt="DevFlow Logo"
         />
 
-        <p className="h2-bold font-space-grotesk text-dark-100 dark:text-light-900 max-sm:hidden">Dev<span className="text-primary-500">Flow</span>
+        <p className="h2-bold font-space-grotesk text-dark-100 dark:text-light-900 max-sm:hidden">
+          Dev<span className="text-primary-500">Flow</span>
         </p>
       </Link>
 
       <p>Global Search</p>
-      <div className="flex-between gap-5"> Theme Picker </div>
+      <div className="flex-between gap-5">
+        {" "}
+        <Theme />{" "}
+      </div>
     </nav>
   );
 };
